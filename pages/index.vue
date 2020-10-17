@@ -5,18 +5,8 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-
 export default {
   name: 'CountriesPage',
-  async fetch() {
-    await this.fetchCountries()
-  },
-  methods: {
-    ...mapActions({
-      fetchCountries: 'countries/fetchCountries',
-    }),
-  },
 }
 </script>
 
