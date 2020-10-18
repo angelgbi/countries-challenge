@@ -1,7 +1,9 @@
 <template>
   <div class="header">
     <h1 class="header__title">Where in the world?</h1>
-    <div class="header__theme-switch">Dark Mode</div>
+    <div class="header__theme-switch">
+      <span class="fa fa-moon-o"></span> Dark Mode
+    </div>
   </div>
 </template>
 
