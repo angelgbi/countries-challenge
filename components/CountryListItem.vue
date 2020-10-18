@@ -67,7 +67,7 @@ export default {
   }
 }
 
-@media only screen and (min-width: $desktop-bp) {
+@media only screen and (min-width: 1024px) {
   .country {
     @apply mx-0;
     @apply transition transition-shadow duration-500 ease-in-out;

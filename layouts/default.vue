@@ -13,7 +13,7 @@
   @apply bg-very-light-gray;
 }
 
-@media only screen and (min-width: $desktop-bp) {
+@media only screen and (min-width: 1024px) {
   .main-container {
     @apply px-20;
   }

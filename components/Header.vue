@@ -24,7 +24,7 @@ export default {}
   }
 }
 
-@media only screen and (min-width: $desktop-bp) {
+@media only screen and (min-width: 1024px) {
   .header {
     @apply px-20;
 

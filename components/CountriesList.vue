@@ -26,7 +26,7 @@ export default {
   @apply grid grid-cols-1 gap-10;
 }
 
-@media only screen and (min-width: $desktop-bp) {
+@media only screen and (min-width: 1024px) {
   .countries-list {
     @apply grid-cols-4 gap-16;
   }
