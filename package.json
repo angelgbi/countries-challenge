@@ -23,7 +23,9 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.6",
+    "sass-loader": "^10.0.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
@@ -40,6 +42,9 @@
     "prettier": "^2.1.2",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^7.0",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-selector-bem-pattern": "^2.1.0"
   }
 }
