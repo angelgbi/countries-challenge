@@ -1,9 +1,24 @@
+import cloneDeep from 'lodash/cloneDeep'
+
 export const state = () => ({
   countries: [],
+  currentUserSearch: '',
 })
 
 export const getters = {
-  getCountries: (state) => state.countries,
+  getCountries: (state) => {
+    let countries = cloneDeep(state.countries)
+
+    // Filter by user search
+    if (state.currentUserSearch) {
+      countries = countries.filter((country) =>
+        country.name
+          .toLowerCase()
+          .includes(state.currentUserSearch.toLowerCase())
+      )
+    }
+    return countries
+  },
   getCountryByCode: (state) => (code) => {
     return state.countries.find((country) => country.alpha3Code === code)
   },
@@ -12,6 +27,9 @@ export const getters = {
 export const mutations = {
   SET_COUNTRIES(state, countries) {
     state.countries = countries
+  },
+  UPDATE_USER_SEARCH(state, newUserSearch) {
+    state.currentUserSearch = newUserSearch
   },
 }
 
@@ -31,5 +49,8 @@ export const actions = {
     } catch (error) {
       console.error('[Fetch country]: ', error)
     }
+  },
+  updateUserSearch({ commit }, newUserSearch) {
+    commit('UPDATE_USER_SEARCH', newUserSearch)
   },
 }

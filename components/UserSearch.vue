@@ -1,0 +1,71 @@
+<template>
+  <div class="user-search">
+    <span class="fa fa-search user-search__icon"></span>
+    <input
+      id="user-search"
+      v-model="currentSearch"
+      type="text"
+      name="country-search"
+      placeholder="Search for a country..."
+    />
+  </div>
+</template>
+
+<script>
+import { mapState, mapActions } from 'vuex'
+
+export default {
+  name: 'UserSearch',
+  computed: {
+    ...mapState({
+      currentUserSearch: (state) => state.countries.currentUserSearch,
+    }),
+    currentSearch: {
+      get() {
+        return this.currentUserSearch
+      },
+      set(newSearch) {
+        this.updateUserSearch(newSearch.trim())
+      },
+    },
+  },
+  methods: {
+    ...mapActions({
+      updateUserSearch: 'countries/updateUserSearch',
+    }),
+  },
+}
+</script>
+
+<style lang="scss">
+.user-search {
+  @apply shadow rounded-md;
+  @apply w-full text-dark-gray py-5;
+  @apply flex flex-row items-center;
+
+  > input {
+    @apply font-light text-sm;
+    @apply w-full;
+    @apply outline-none;
+
+    &::placeholder {
+      @apply text-dark-gray;
+    }
+  }
+
+  &__icon {
+    @apply text-lg;
+    @apply px-8;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .user-search {
+    @apply w-1/3;
+
+    > input {
+      @apply text-base;
+    }
+  }
+}
+</style>

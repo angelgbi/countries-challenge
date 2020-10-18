@@ -9,7 +9,7 @@
 
 <style lang="scss">
 .main-container {
-  @apply px-4 mt-2;
+  @apply px-4;
   @apply bg-very-light-gray;
 }
 
