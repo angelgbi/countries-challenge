@@ -2,6 +2,7 @@
   <div>
     <div class="filters">
       <UserSearch />
+      <UserSelect />
     </div>
     <CountriesList />
   </div>
@@ -15,14 +16,14 @@ export default {
 
 <style lang="scss">
 .filters {
-  @apply my-6;
+  @apply mt-6 mb-8;
   @apply flex flex-col;
 }
 
 @media only screen and (min-width: 1024px) {
   .filters {
     @apply my-12;
-    @apply flex-row;
+    @apply flex-row justify-between items-center;
   }
 }
 </style>

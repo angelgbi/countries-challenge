@@ -3,11 +3,19 @@ import cloneDeep from 'lodash/cloneDeep'
 export const state = () => ({
   countries: [],
   currentUserSearch: '',
+  regionSelected: '',
 })
 
 export const getters = {
   getCountries: (state) => {
     let countries = cloneDeep(state.countries)
+
+    // Filter by Region
+    if (state.regionSelected) {
+      countries = countries.filter(
+        (country) => country.region === state.regionSelected
+      )
+    }
 
     // Filter by user search
     if (state.currentUserSearch) {
@@ -31,6 +39,9 @@ export const mutations = {
   UPDATE_USER_SEARCH(state, newUserSearch) {
     state.currentUserSearch = newUserSearch
   },
+  UPDATE_REGION(state, regionSelected) {
+    state.regionSelected = regionSelected
+  },
 }
 
 export const actions = {
@@ -52,5 +63,8 @@ export const actions = {
   },
   updateUserSearch({ commit }, newUserSearch) {
     commit('UPDATE_USER_SEARCH', newUserSearch)
+  },
+  updateCurrentRegion({ commit }, region) {
+    commit('UPDATE_REGION', region)
   },
 }
