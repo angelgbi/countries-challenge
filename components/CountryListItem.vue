@@ -39,6 +39,7 @@ export default {
   @apply mx-10;
   @apply rounded-md overflow-hidden;
   @apply shadow-md;
+  background-color: var(--bg-secondary);
 
   &:hover {
     @apply shadow-xl cursor-pointer;
