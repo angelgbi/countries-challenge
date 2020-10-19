@@ -1,5 +1,3 @@
-import cloneDeep from 'lodash/cloneDeep'
-
 export const state = () => ({
   countries: [],
   currentUserSearch: '',
@@ -8,7 +6,7 @@ export const state = () => ({
 
 export const getters = {
   getCountries: (state) => {
-    let countries = cloneDeep(state.countries)
+    let countries = state.countries
 
     // Filter by Region
     if (state.regionSelected) {
