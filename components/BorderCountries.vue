@@ -7,7 +7,11 @@
         :key="countryCode"
         class="border-countries__item"
       >
-        {{ countryBorder(countryCode).name }}
+        <AppLink
+          :to="`/country/${countryBorder(countryCode).name.toLowerCase()}`"
+        >
+          {{ countryBorder(countryCode).name }}
+        </AppLink>
       </li>
     </ul>
   </div>
