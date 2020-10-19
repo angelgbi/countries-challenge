@@ -13,6 +13,7 @@
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import debounce from 'lodash/debounce'
 
 export default {
   name: 'UserSearch',
@@ -24,9 +25,9 @@ export default {
       get() {
         return this.currentUserSearch
       },
-      set(newSearch) {
+      set: debounce(function (newSearch) {
         this.updateUserSearch(newSearch.trim())
-      },
+      }, 300),
     },
   },
   methods: {
