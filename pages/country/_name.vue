@@ -44,7 +44,7 @@ export default {
 
 @media only screen and (min-width: 1024px) {
   .country-page {
-    @apply px-0 pt-16 h-screen;
+    @apply px-0 pt-16;
 
     &__back {
       @apply w-32 px-8 py-3;

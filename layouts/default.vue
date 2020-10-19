@@ -13,6 +13,7 @@
 }
 
 .main-container {
+  @apply min-h-screen;
   @apply px-4;
   background-color: var(--bg);
 }
