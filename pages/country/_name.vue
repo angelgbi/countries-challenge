@@ -15,6 +15,10 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'CountryPage',
+  validate({ params, store }) {
+    const country = store.getters['countries/getCountryByName'](params.name)
+    return !!country
+  },
   computed: {
     ...mapGetters({
       country: 'countries/getCountryByName',
