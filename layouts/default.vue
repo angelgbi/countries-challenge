@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <Header />
     <div class="main-container">
       <Nuxt />
@@ -8,12 +8,20 @@
 </template>
 
 <style lang="scss">
+.app {
+  @apply min-h-screen;
+}
+
 .main-container {
   @apply px-4;
-  @apply bg-very-light-gray;
+  background-color: var(--bg);
 }
 
 @media only screen and (min-width: 1024px) {
+  .app {
+    @apply max-w-screen-xl mx-auto;
+  }
+
   .main-container {
     @apply px-20;
   }

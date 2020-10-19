@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="filters">
+  <div class="countries-page">
+    <div class="countries-page__filters">
       <UserSearch />
       <UserSelect />
     </div>
@@ -15,15 +15,23 @@ export default {
 </script>
 
 <style lang="scss">
-.filters {
-  @apply mt-6 mb-8;
-  @apply flex flex-col;
+.countries-page {
+  @apply pt-6;
+
+  &__filters {
+    @apply mb-8;
+    @apply flex flex-col;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .filters {
-    @apply my-12;
-    @apply flex-row justify-between items-center;
+  .countries-page {
+    @apply pt-12;
+
+    &__filters {
+      @apply mb-12;
+      @apply flex-row justify-between items-center;
+    }
   }
 }
 </style>

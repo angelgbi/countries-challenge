@@ -28,11 +28,11 @@ export default {
 </script>
 <style lang="scss">
 .country-page {
-  @apply px-3;
+  @apply px-3 pt-10;
 
   &__back {
     @apply shadow-lg rounded;
-    @apply w-1/3 px-6 py-2 mt-10 mb-16;
+    @apply w-1/3 px-6 py-2 mb-16;
     @apply font-light text-sm;
     @apply flex flex-row justify-between items-center;
   }
@@ -44,10 +44,10 @@ export default {
 
 @media only screen and (min-width: 1024px) {
   .country-page {
-    @apply p-0;
+    @apply px-0 pt-16 h-screen;
 
     &__back {
-      @apply w-32 px-8 py-3 my-16;
+      @apply w-32 px-8 py-3;
       @apply text-base;
     }
   }
