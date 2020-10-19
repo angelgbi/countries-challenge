@@ -10,7 +10,7 @@
         <h1 class="country__name">{{ countryData.name }}</h1>
         <p class="country__info">
           <b>Population: </b>
-          {{ formatPopulation }}
+          {{ formatPopulation(countryData.population) }}
         </p>
         <p class="country__info"><b>Region: </b> {{ countryData.region }}</p>
         <p class="country__info"><b>Capital: </b> {{ countryData.capital }}</p>
@@ -20,17 +20,15 @@
 </template>
 
 <script>
+import { helperMixin } from '~/mixins'
+
 export default {
   name: 'CountryListItem',
+  mixins: [helperMixin],
   props: {
     countryData: {
       type: Object,
       required: true,
-    },
-  },
-  computed: {
-    formatPopulation() {
-      return Number(this.countryData.population).toLocaleString('en-US')
     },
   },
 }
