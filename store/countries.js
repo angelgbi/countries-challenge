@@ -30,6 +30,11 @@ export const getters = {
   getCountryByCode: (state) => (code) => {
     return state.countries.find((country) => country.alpha3Code === code)
   },
+  getCountryByName: (state) => (name) => {
+    return state.countries.find(
+      (country) => country.name.toLowerCase() === name.toLowerCase()
+    )
+  },
 }
 
 export const mutations = {
