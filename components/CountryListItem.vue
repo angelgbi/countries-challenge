@@ -1,20 +1,22 @@
 <template>
-  <div class="country">
-    <img
-      :src="countryData.flag"
-      :alt="countryData.name"
-      class="country__flag"
-    />
-    <div class="country__content">
-      <h1 class="country__name">{{ countryData.name }}</h1>
-      <p class="country__info">
-        <b>Population: </b>
-        {{ formatPopulation }}
-      </p>
-      <p class="country__info"><b>Region: </b> {{ countryData.region }}</p>
-      <p class="country__info"><b>Capital: </b> {{ countryData.capital }}</p>
+  <AppLink :to="`/country/${countryData.name.toLowerCase()}`">
+    <div class="country">
+      <img
+        :src="countryData.flag"
+        :alt="countryData.name"
+        class="country__flag"
+      />
+      <div class="country__content">
+        <h1 class="country__name">{{ countryData.name }}</h1>
+        <p class="country__info">
+          <b>Population: </b>
+          {{ formatPopulation }}
+        </p>
+        <p class="country__info"><b>Region: </b> {{ countryData.region }}</p>
+        <p class="country__info"><b>Capital: </b> {{ countryData.capital }}</p>
+      </div>
     </div>
-  </div>
+  </AppLink>
 </template>
 
 <script>
