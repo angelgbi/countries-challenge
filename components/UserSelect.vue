@@ -67,12 +67,14 @@ export default {
     @apply w-full py-5 px-6;
     @apply flex flex-row justify-between items-center;
     @apply font-semibold text-sm;
+    background-color: var(--bg-secondary);
   }
 
   &__items {
     @apply absolute z-10;
     @apply shadow rounded-md;
-    @apply w-full mt-2 pt-4 bg-white;
+    @apply w-full mt-2 pt-4;
+    background-color: var(--bg-secondary);
   }
 
   &__item {

@@ -41,16 +41,19 @@ export default {
 <style lang="scss">
 .user-search {
   @apply shadow rounded-md;
-  @apply w-full text-dark-gray py-5;
+  @apply w-full py-5;
   @apply flex flex-row items-center;
+  background-color: var(--bg-secondary);
+  color: var(--color-input);
 
   > input {
     @apply font-light text-sm;
     @apply w-full;
     @apply outline-none;
+    background-color: var(--bg-secondary);
 
     &::placeholder {
-      @apply text-dark-gray;
+      color: inherit;
     }
   }
 
