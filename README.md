@@ -1,5 +1,18 @@
 # countries-challenge
 
+## Nuxt app of countries
+This nuxt app makes use of [Countries REST API](https://restcountries.eu)
+
+It's build with Nuxt (js) and Tailwind (css) frameworks
+
+- Mobile first
+- Show all countries list on home page
+- Filter countries based on search input
+- Filter countries based on regions
+- Show detail country information on `country/{countryname}`
+- Look to border countries from detail country page and jump to those countries pages
+- Switch between dark and light theme mode
+
 ## Build Setup
 
 ```bash
@@ -17,4 +30,6 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+[Nuxt.js docs](https://nuxtjs.org)
+[Tailwind docs](https://tailwindcss.com)
+
