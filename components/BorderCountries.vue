@@ -53,6 +53,7 @@ export default {
     @apply font-light text-xs text-center;
     @apply shadow-lg rounded;
     @apply w-auto py-2 px-4 mt-6 mr-3;
+    background-color: var(--bg-secondary);
   }
 }
 

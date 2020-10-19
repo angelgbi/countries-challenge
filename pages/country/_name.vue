@@ -35,6 +35,7 @@ export default {
     @apply w-1/3 px-6 py-2 mb-16;
     @apply font-light text-sm;
     @apply flex flex-row justify-between items-center;
+    background-color: var(--bg-secondary);
   }
 
   &__icon {
